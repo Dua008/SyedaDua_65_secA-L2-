@@ -1,7 +1,3 @@
-# SyedaDua_65_secA-L2-
-Assignment: 2 (5679340-Syeda Dua Zehra 16 sec A) 
-
-part (A)
 import java.util.Scanner;
 
 class decimaltobinary {
@@ -13,8 +9,8 @@ class decimaltobinary {
 
         System.out.print("Enter an integer: ");
         
-        a = input.nextInt();   // number
-        c = a;                 // original
+        a = input.nextInt();   
+        c = a;                 
 
         String binary = "";
 
