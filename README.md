@@ -1,5 +1,4 @@
-Part (a) Write Java program that takes input an integer number and converts it into a  binary number   
-
+Part (a) 
 import java.util.Scanner;
 
 class decimaltobinary {
