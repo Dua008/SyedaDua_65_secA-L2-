@@ -1,9 +1,11 @@
+Part (a) Write Java program that takes input an integer number and converts it into a  binary number   
+
 import java.util.Scanner;
 
 class decimaltobinary {
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
+         Scanner input = new Scanner(System.in);
 
         int a, b, c;
 
