@@ -33,46 +33,43 @@ class decimaltobinary {
 }
 
 part (b)
-import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.*;
 
-public class binary1conversion {
+public class BinaryArray {
+    
+    public static int[] decimalToBinaryArray(int num) {
+        int temp = num;
+        int count = 0;
 
-    public static ArrayList<Integer> binary(int a) {
-        ArrayList<Integer> b = new ArrayList<>();
-
-        if (a == 0) {
-            b.add(0);
-        } else {
-            while (a > 0) {
-                int c = a % 2;
-                b.add(c);
-                a = a / 2;
-            }
-
-            // reverse list
-            int i = 0;
-            int j = b.size() - 1;
-
-            while (i < j) {
-                int temp = b.get(i);
-                b.set(i, b.get(j));
-                b.set(j, temp);
-                i++;
-                j--;
-            }
+        // count digits
+        while (temp > 0) {
+            temp /= 2;
+            count++;
         }
 
-        return b;
+        int[] binary = new int[count];
+
+        // fill array from end
+        for (int i = count - 1; i >= 0; i--) {
+            binary[i] = num % 2;
+            num /= 2;
+        }
+
+        return binary;
     }
 
     public static void main(String[] args) {
-        Scanner x = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter an integer: ");
-        int z = x.nextInt();
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
 
-        System.out.println("The binary conversion of " + z + " is " + binary(z));
+        int[] result = decimalToBinaryArray(num);
+
+        System.out.print("Binary array: ");
+        for (int bit : result) {
+            System.out.print(bit);
+        }
     }
 }
 part(c)
